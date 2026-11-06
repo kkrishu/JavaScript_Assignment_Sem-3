@@ -1,42 +1,46 @@
-# JavaScript Assignment – Semester 3
+# JavaScript Programming Lab – Semester 3
 
-This repository contains the JavaScript Programming Lab assignments for Semester 3 (BCS354), completed as part of the B.Tech Computer Science and Engineering curriculum at Invertis University.
+A collection of JavaScript practical assignments completed as part of the B.Tech Computer Science and Engineering curriculum at Invertis University.
 
-## About the Repository
+<p align="center">
+  <a href="https://kkrishu.github.io/JavaScript_Assignment_Sem-3/">
+    <strong>🚀 View Live Dashboard</strong>
+  </a>
+  &nbsp; | &nbsp;
+  <a href="https://github.com/kkrishu/JavaScript_Assignment_Sem-3">
+    <strong>View Repository</strong>
+  </a>
+</p>
 
-The repository contains 15 assignments covering JavaScript fundamentals, programming concepts, functions, arrays, objects, DOM manipulation, asynchronous JavaScript, and more.
+---
+
+## About
+
+This repository contains 15 assignments for the JavaScript Programming Lab (BCS354). Each assignment is organized into individual question folders with source code and output screenshots.
+
+The practicals cover JavaScript fundamentals, programming logic, functions, arrays, objects, DOM manipulation, and asynchronous programming.
 
 ## Assignments
 
-| Assignment | Topic |
-|---|---|
-| Assignment 1 | Your First JavaScript Script |
-| Assignment 2 | Operators, Type Conversion and a Calculator |
-| Assignment 3 | Conditions and Loops |
-| Assignment 4 | Writing Functions |
-| Assignment 5 | Arrays, Array Methods and Nested Arrays |
-| Assignment 6 | JSON Text |
-| Assignment 7 | Constructor Functions and Classes |
-| Assignment 8 | Inheritance, Methods and Composition |
-| Assignment 9 | DOM, Validation, Storage and Quiz |
-| Assignment 10 | Objects and Destructuring |
-| Assignment 11 | Scope and Closures |
-| Assignment 12 | Callbacks and Higher-Order Functions |
-| Assignment 13 | Reduce, Some, Every and Map |
-| Assignment 14 | Timers and Intervals |
-| Assignment 15 | Promises and async/await with Local Data |
-
-## Technologies Used
-
-- HTML5
-- JavaScript (ES6+)
-- Visual Studio Code
-- Google Chrome
-- Live Server
+| No. | Assignment | Questions |
+|:---:|---|:---:|
+| 01 | Your First JavaScript Script | 3 |
+| 02 | Operators, Type Conversion and a Calculator | 3 |
+| 03 | Conditions and Loops | 3 |
+| 04 | Writing Functions | 3 |
+| 05 | Arrays, Array Methods and Nested Arrays | 4 |
+| 06 | JSON Text | 3 |
+| 07 | Constructor Functions and Classes | 3 |
+| 08 | Inheritance, Methods and Composition | 3 |
+| 09 | DOM, Validation, Storage and Quiz | 4 |
+| 10 | Objects and Destructuring | 3 |
+| 11 | Scope and Closures | 3 |
+| 12 | Callbacks and Higher-Order Functions | 3 |
+| 13 | Reduce, Some, Every and Map | 3 |
+| 14 | Timers and Intervals | 3 |
+| 15 | Promises and async/await with Local Data | 4 |
 
 ## Repository Structure
-
-Each assignment has its own folder. Every question is maintained separately with its HTML file, JavaScript file, and output screenshot.
 
 ```text
 JavaScript_Assignment_Sem_3/
@@ -51,43 +55,27 @@ JavaScript_Assignment_Sem_3/
 │   └── Question_3/
 │
 ├── Assignment_2/
-│   ├── README.md
-│   ├── Question_1/
-│   ├── Question_2/
-│   └── Question_3/
-│
+├── Assignment_3/
 ├── ...
-│
 ├── Assignment_15/
-│   ├── README.md
-│   ├── Question_1/
-│   ├── Question_2/
-│   ├── Question_3/
-│   └── Question_4/
 │
+├── index.html
 └── README.md
 ```
 
-## How to Run
+Each assignment contains its own README, and each question has its respective HTML file, JavaScript file, and output screenshot.
+
+## Technologies Used
+
+- HTML5
+- JavaScript (ES6+)
+- Visual Studio Code
+- Google Chrome
+- Git and GitHub
+- GitHub Pages
+
+## Running the Practicals
 
 1. Clone or download this repository.
-2. Open the repository in Visual Studio Code.
-3. Navigate to the required assignment and question folder.
-4. Open `index.html` using the Live Server extension.
-5. For console-based programs, open the browser Developer Tools using `Cmd + Option + J` on Mac.
-6. Check the output in the Console tab.
-
-## Output Screenshots
-
-An `Output.png` screenshot is maintained inside each question folder to document the program output.
-
-## Purpose
-
-The purpose of this repository is to practice JavaScript programming concepts through practical assignments and maintain a structured record of lab work.
-
----
-
-**Course:** JavaScript Programming Lab (BCS354)  
-**Semester:** 3  
-**Program:** B.Tech – Computer Science and Engineering  
-**University:** Invertis University
+2. Open the required assignment and question folder.
+3. Run its `index.html` using
