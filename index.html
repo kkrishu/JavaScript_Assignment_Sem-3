@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lab Assignments</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            padding: 40px 7%;
+        }
+
+        header {
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .stat {
+            background: white;
+            padding: 18px 24px;
+            border-radius: 10px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .stat h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .assignments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+        }
+
+        .assignment {
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.2s ease;
+        }
+
+        .assignment:hover {
+            transform: translateY(-3px);
+            border-color: #999;
+        }
+
+        .assignment h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .assignment p {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        details {
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .questions {
+            display: grid;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .questions a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            background: #f5f5f5;
+            padding: 10px 12px;
+            border-radius: 7px;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .questions a:hover {
+            background: #e8e8e8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 45px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 5%;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JavaScript Lab Assignments</h1>
+        <p>
+            BCS354 · Semester 3 · B.Tech Computer Science and Engineering
+            <br>
+            Invertis University
+        </p>
+    </header>
+
+    <section class="stats">
+        <div class="stat">
+            <h2>15</h2>
+            <p>Total Assignments</p>
+        </div>
+
+        <div class="stat">
+            <h2>49</h2>
+            <p>Total Questions</p>
+        </div>
+
+        <div class="stat">
+            <h2>JavaScript</h2>
+            <p>Programming Language</p>
+        </div>
+    </section>
+
+    <main class="assignments" id="assignments"></main>
+
+    <footer>
+        Krishu · JavaScript Programming Lab · BCS354
+    </footer>
+
+    <script>
+        const assignments = [
+            {
+                title: "Your First JavaScript Script",
+                questions: 3
+            },
+            {
+                title: "Operators, Type Conversion and a Calculator",
+                questions: 3
+            },
+            {
+                title: "Conditions and Loops",
+                questions: 3
+            },
+            {
+                title: "Writing Functions",
+                questions: 3
+            },
+            {
+                title: "Arrays, Array Methods and Nested Arrays",
+                questions: 4
+            },
+            {
+                title: "JSON Text",
+                questions: 3
+            },
+            {
+                title: "Constructor Functions and Classes",
+                questions: 3
+            },
+            {
+                title: "Inheritance, Methods and Composition",
+                questions: 3
+            },
+            {
+                title: "DOM, Validation, Storage and Quiz",
+                questions: 4
+            },
+            {
+                title: "Objects and Destructuring",
+                questions: 3
+            },
+            {
+                title: "Scope and Closures",
+                questions: 3
+            },
+            {
+                title: "Callbacks and Higher-Order Functions",
+                questions: 3
+            },
+            {
+                title: "Reduce, Some, Every and Map",
+                questions: 3
+            },
+            {
+                title: "Timers and Intervals",
+                questions: 3
+            },
+            {
+                title: "Promises and async/await with Local Data",
+                questions: 4
+            }
+        ];
+
+        const container = document.getElementById("assignments");
+
+        assignments.forEach((assignment, index) => {
+            const assignmentNumber = index + 1;
+
+            const questionLinks = Array.from(
+                { length: assignment.questions },
+                (_, questionIndex) => {
+                    const questionNumber = questionIndex + 1;
+
+                    return `
+                        <a href="./Assignment_${assignmentNumber}/Question_${questionNumber}/index.html">
+                            Question ${questionNumber} →
+                        </a>
+                    `;
+                }
+            ).join("");
+
+            container.innerHTML += `
+                <article class="assignment">
+                    <h3>Assignment ${assignmentNumber}</h3>
+                    <p>${assignment.title}</p>
+
+                    <details>
+                        <summary>
+                            View ${assignment.questions} Questions
+                        </summary>
+
+                        <div class="questions">
+                            ${questionLinks}
+                        </div>
+                    </details>
+                </article>
+            `;
+        });
+    </script>
+
+</body>
+</html>
